@@ -696,7 +696,7 @@ section {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  z-index: 24;
+  z-index: 9999;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -707,6 +707,8 @@ section {
   padding: 0.7rem 0.95rem;
   background: linear-gradient(120deg, #10b170, #078c58);
   box-shadow: 0 14px 32px rgba(8, 140, 88, 0.45);
+  opacity: 1;
+  visibility: visible;
 }
 
 .whatsapp-float svg {
@@ -831,6 +833,16 @@ section {
 }
 
 @media (max-width: 920px) {
+  .whatsapp-float {
+    display: inline-flex !important;
+    right: max(0.8rem, env(safe-area-inset-right));
+    bottom: max(0.8rem, calc(0.8rem + env(safe-area-inset-bottom)));
+  }
+
+  body:not(.menu-open) .whatsapp-float {
+    display: inline-flex !important;
+  }
+
   .hero-banner {
     min-height: 420px;
     padding: 1.5rem;
@@ -866,12 +878,6 @@ section {
     margin-top: 0.6rem;
     animation: none;
   }
-
-  .whatsapp-float {
-    display: inline-flex;
-    right: 0.8rem;
-    bottom: 0.8rem;
-  }
 }
 
 @media (max-width: 640px) {
@@ -886,6 +892,7 @@ section {
   }
 
   .whatsapp-float {
+    display: inline-flex !important;
     padding: 0.62rem 0.78rem;
     font-size: 0.88rem;
     bottom: calc(0.7rem + env(safe-area-inset-bottom));
