@@ -1,0 +1,39 @@
+<svg width="1100" height="760" viewBox="0 0 1100 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Ilustracao de emplacamento automotivo</title>
+  <desc id="heroDesc">Cena estilizada com carro, placa Mercosul e elementos de oficina.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="85" y1="42" x2="1002" y2="638" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6EEFC"/>
+      <stop offset="1" stop-color="#DDF7EF"/>
+    </linearGradient>
+    <linearGradient id="carGrad" x1="149" y1="500" x2="964" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D4EA6"/>
+      <stop offset="1" stop-color="#07306A"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="380" y1="332" x2="724" y2="433" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9EEF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="760" rx="34" fill="url(#bgGrad)"/>
+  <circle cx="860" cy="130" r="124" fill="#0D4EA6" fill-opacity="0.09"/>
+  <circle cx="204" cy="150" r="102" fill="#0D8766" fill-opacity="0.13"/>
+  <path d="M80 560H1020" stroke="#0D4EA6" stroke-opacity="0.32" stroke-width="16" stroke-linecap="round"/>
+  <path d="M150 489C167 443 208 408 257 397L396 365C489 343 587 343 680 365L840 404C886 415 925 448 939 493L964 560H149L150 489Z" fill="url(#carGrad)"/>
+  <rect x="224" y="440" width="138" height="70" rx="35" fill="#BFD2F6" fill-opacity="0.48"/>
+  <rect x="726" y="440" width="138" height="70" rx="35" fill="#BFD2F6" fill-opacity="0.48"/>
+  <rect x="348" y="300" width="408" height="170" rx="16" fill="url(#plateGrad)" stroke="#C8D4EB" stroke-width="5"/>
+  <rect x="348" y="300" width="408" height="46" rx="14" fill="#0D4EA6"/>
+  <circle cx="378" cy="323" r="8" fill="#ffffff"/>
+  <circle cx="726" cy="323" r="8" fill="#ffffff"/>
+  <text x="554" y="331" text-anchor="middle" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">BRASIL</text>
+  <text x="554" y="403" text-anchor="middle" fill="#10131A" font-size="74" font-family="Arial Black, Arial, Helvetica, sans-serif" letter-spacing="9">WSP4C45</text>
+  <text x="554" y="440" text-anchor="middle" fill="#0D4EA6" font-size="25" font-family="Arial, Helvetica, sans-serif" letter-spacing="4">MERCOSUL</text>
+  <circle cx="262" cy="560" r="68" fill="#111621"/>
+  <circle cx="262" cy="560" r="31" fill="#D3DEEE"/>
+  <circle cx="846" cy="560" r="68" fill="#111621"/>
+  <circle cx="846" cy="560" r="31" fill="#D3DEEE"/>
+  <path d="M265 230L274 252H298L278 264L286 287L265 273L244 287L252 264L232 252H256L265 230Z" fill="#0D4EA6"/>
+  <path d="M840 212L848 231H868L851 242L858 262L840 249L822 262L829 242L812 231H832L840 212Z" fill="#0D8766"/>
+  <path d="M150 619H964" stroke="#4D5E79" stroke-opacity="0.26" stroke-width="10" stroke-linecap="round"/>
+</svg>

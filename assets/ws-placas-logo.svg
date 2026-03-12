@@ -1,0 +1,15 @@
+<svg width="860" height="330" viewBox="0 0 860 330" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">WS Placas Mercosul</title>
+  <desc id="d">Logo estilizado da WS Placas Mercosul Emplacamento Veicular.</desc>
+  <rect width="860" height="330" rx="24" fill="white"/>
+  <g opacity="0.95">
+    <path d="M430 30L438 50H460L442 62L449 83L430 70L411 83L418 62L400 50H422L430 30Z" fill="#0D4EA6"/>
+    <path d="M362 72L369 89H388L372 100L378 118L362 106L346 118L352 100L336 89H355L362 72Z" fill="#0D4EA6"/>
+    <path d="M500 72L507 89H526L510 100L516 118L500 106L484 118L490 100L474 89H493L500 72Z" fill="#0D4EA6"/>
+    <path d="M430 112L437 129H456L440 140L446 158L430 146L414 158L420 140L404 129H423L430 112Z" fill="#0D4EA6"/>
+  </g>
+  <path d="M140 142C222 112 318 96 430 96C542 96 638 112 720 142" stroke="#0D8766" stroke-width="6" stroke-linecap="round"/>
+  <text x="430" y="206" text-anchor="middle" fill="#0D4EA6" font-size="70" font-family="Arial, Helvetica, sans-serif" letter-spacing="8">MERCOSUL</text>
+  <text x="430" y="286" text-anchor="middle" fill="#0B0B10" font-size="100" font-weight="700" font-family="Arial Black, Arial, Helvetica, sans-serif" letter-spacing="5">WS PLACAS</text>
+  <text x="430" y="323" text-anchor="middle" fill="#0D4EA6" font-size="36" font-family="Arial, Helvetica, sans-serif" letter-spacing="6">EMPLACAMENTO VEICULAR</text>
+</svg>

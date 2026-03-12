@@ -1,0 +1,26 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sTitle sDesc">
+  <title id="sTitle">Estampagem de placas</title>
+  <desc id="sDesc">Ilustracao de estacao de estampagem para placas automotivas.</desc>
+  <defs>
+    <linearGradient id="stBg" x1="71" y1="44" x2="831" y2="570" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3F7FE"/>
+      <stop offset="1" stop-color="#E6F7F0"/>
+    </linearGradient>
+    <linearGradient id="machine" x1="176" y1="179" x2="727" y2="477" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D4EA6"/>
+      <stop offset="1" stop-color="#09387A"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="26" fill="url(#stBg)"/>
+  <rect x="150" y="180" width="600" height="320" rx="24" fill="url(#machine)"/>
+  <rect x="198" y="230" width="505" height="120" rx="20" fill="#EDF3FF"/>
+  <rect x="198" y="366" width="505" height="88" rx="14" fill="#17345F"/>
+  <rect x="256" y="396" width="388" height="46" rx="9" fill="#F8FBFF"/>
+  <rect x="256" y="396" width="388" height="15" rx="9" fill="#0D4EA6"/>
+  <text x="450" y="426" text-anchor="middle" fill="#0F1523" font-size="34" font-family="Arial Black, Arial, Helvetica, sans-serif" letter-spacing="5">ABC1D23</text>
+  <text x="450" y="344" text-anchor="middle" fill="#0D4EA6" font-size="70" font-family="Arial, Helvetica, sans-serif" letter-spacing="11">MERCOSUL</text>
+  <rect x="212" y="120" width="478" height="46" rx="16" fill="#0D8766"/>
+  <text x="451" y="151" text-anchor="middle" fill="white" font-size="22" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">ESTACAO DE ESTAMPAGEM</text>
+  <circle cx="220" cy="534" r="22" fill="#0D4EA6" fill-opacity="0.35"/>
+  <circle cx="680" cy="534" r="22" fill="#0D4EA6" fill-opacity="0.35"/>
+</svg>
