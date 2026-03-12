@@ -23,6 +23,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: clip;
 }
 
 body {
@@ -754,8 +759,8 @@ section {
   .main-nav {
     position: fixed;
     top: 0;
-    right: -320px;
-    width: 300px;
+    right: 0;
+    width: min(86vw, 320px);
     height: 100dvh;
     padding: 6.2rem 1rem 1rem;
     background: #f8fbff;
@@ -763,11 +768,27 @@ section {
     box-shadow: -14px 0 32px rgba(10, 44, 94, 0.15);
     flex-direction: column;
     align-items: flex-start;
-    transition: right 0.25s ease;
+    transform: translateX(105%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.28s ease, opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 80;
   }
 
   body.menu-open .main-nav {
-    right: 0;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 11, 24, 0.35);
+    z-index: 70;
   }
 
   .btn-cta {
@@ -825,11 +846,6 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .whatsapp-float {
-    bottom: 0.7rem;
-    right: 0.7rem;
-  }
-
   .map-card iframe {
     height: 240px;
   }
@@ -840,7 +856,7 @@ section {
     position: fixed !important;
     display: inline-flex !important;
     right: max(0.8rem, env(safe-area-inset-right));
-    bottom: max(4.2rem, calc(1rem + env(safe-area-inset-bottom)));
+    bottom: max(6.2rem, calc(1.2rem + env(safe-area-inset-bottom)));
     z-index: 2147483647 !important;
   }
 
@@ -902,7 +918,7 @@ section {
     padding: 0.62rem 0.78rem;
     font-size: 0.88rem;
     right: max(0.7rem, env(safe-area-inset-right));
-    bottom: max(4.8rem, calc(1rem + env(safe-area-inset-bottom)));
+    bottom: max(6.6rem, calc(1.2rem + env(safe-area-inset-bottom)));
     z-index: 2147483647 !important;
   }
 
