@@ -231,14 +231,29 @@ body.menu-open .menu-toggle > span:nth-child(3) {
   padding: 2.1rem;
   display: flex;
   align-items: center;
-  background: linear-gradient(115deg, rgba(5, 12, 24, 0.82) 0%, rgba(5, 12, 24, 0.62) 45%, rgba(5, 12, 24, 0.35) 100%),
-    url("assets/banner-mercosul-faded.svg") right center/cover no-repeat;
+  background:
+    linear-gradient(90deg, rgba(3, 9, 18, 0.96) 0%, rgba(3, 9, 18, 0.86) 34%, rgba(3, 9, 18, 0.48) 60%, rgba(3, 9, 18, 0.15) 100%),
+    linear-gradient(180deg, rgba(3, 9, 18, 0.08), rgba(3, 9, 18, 0.58)),
+    url("assets/hero-human-service.jpg") center right/cover no-repeat;
   box-shadow: var(--shadow-strong);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  right: clamp(1rem, 5vw, 4rem);
+  top: clamp(1rem, 4vw, 2.8rem);
+  width: min(260px, 28vw);
+  aspect-ratio: 2.85 / 1;
+  background: url("assets/ws-placas-logo.svg") center/contain no-repeat;
+  opacity: 0.18;
+  filter: grayscale(1) brightness(2.2);
+  pointer-events: none;
 }
 
 .hero-banner-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 620px;
 }
 
@@ -993,7 +1008,17 @@ section {
   .hero-banner {
     min-height: 420px;
     padding: 1.5rem;
-    background-position: 67% center;
+    background:
+      linear-gradient(180deg, rgba(3, 9, 18, 0.88) 0%, rgba(3, 9, 18, 0.72) 54%, rgba(3, 9, 18, 0.4) 100%),
+      linear-gradient(90deg, rgba(3, 9, 18, 0.96), rgba(3, 9, 18, 0.3)),
+      url("assets/hero-human-service.jpg") 66% center/cover no-repeat;
+  }
+
+  .hero-banner::after {
+    right: 1rem;
+    top: 1rem;
+    width: 150px;
+    opacity: 0.12;
   }
 
   .hero-banner h1 {
