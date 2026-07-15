@@ -456,7 +456,7 @@ section {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.1rem;
 }
 
@@ -524,11 +524,12 @@ section {
 
 .service-body {
   padding: 1.05rem;
+  min-height: 150px;
 }
 
 .service-card h3 {
   margin: 0 0 0.4rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .service-card p {
@@ -783,6 +784,33 @@ section {
   text-decoration: none;
   color: var(--blue-700);
   font-weight: 700;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem 1.6rem;
+}
+
+.social-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #0a3e86, #0d8766 55%, #eff214);
+  box-shadow: 0 16px 32px rgba(7, 47, 102, 0.18);
+}
+
+.social-footer svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
 }
 
 .whatsapp-float {
