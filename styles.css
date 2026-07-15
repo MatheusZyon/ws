@@ -4,6 +4,8 @@
   --blue-900: #072f66;
   --green-600: #0d8766;
   --green-700: #0b6d52;
+  --yellow: #eff214;
+  --deep: #061223;
   --ink: #111621;
   --slate-700: #2e3d54;
   --slate-500: #5a6b84;
@@ -35,6 +37,7 @@ body {
   font-family: "Sora", sans-serif;
   color: var(--ink);
   background:
+    linear-gradient(135deg, rgba(239, 242, 20, 0.08) 0 12%, transparent 12% 100%),
     radial-gradient(880px 480px at 8% -8%, #dce7fb 0%, transparent 62%),
     radial-gradient(840px 420px at 95% 7%, #d8f3e8 0%, transparent 65%),
     linear-gradient(180deg, #f7faff 0%, #edf3ff 50%, #f7fbff 100%);
@@ -447,10 +450,6 @@ section {
   object-fit: cover;
 }
 
-.service-photo img {
-  object-position: center 58%;
-}
-
 .diff-photo img {
   object-position: center 52%;
 }
@@ -458,43 +457,73 @@ section {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
 .service-card {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(239, 246, 255, 0.92));
+  background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 1rem;
-  box-shadow: 0 14px 30px rgba(11, 42, 88, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 34px rgba(11, 42, 88, 0.1);
+  position: relative;
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 -4px 0 rgba(13, 135, 102, 0.14);
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 38px rgba(7, 44, 95, 0.17);
+  box-shadow: 0 28px 44px rgba(7, 44, 95, 0.18);
   border-color: rgba(13, 78, 166, 0.28);
 }
 
-.service-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
+.service-media {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--deep);
+}
+
+.service-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.36s ease;
+}
+
+.service-card:hover .service-media img {
+  transform: scale(1.045);
+}
+
+.service-media span {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.7rem;
-  background: linear-gradient(145deg, rgba(13, 78, 166, 0.14), rgba(13, 135, 102, 0.12));
+  min-width: 42px;
+  height: 34px;
+  border-radius: 999px;
+  color: var(--deep);
+  font-family: "Teko", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: var(--yellow);
+  box-shadow: 0 10px 22px rgba(6, 18, 35, 0.18);
 }
 
-.service-icon svg {
-  width: 30px;
-  height: 30px;
-  stroke: var(--blue-900);
-  stroke-width: 2.6;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.service-body {
+  padding: 1.05rem;
 }
 
 .service-card h3 {
@@ -507,27 +536,62 @@ section {
   color: var(--slate-700);
 }
 
+.diff-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 1.1rem;
+  align-items: stretch;
+}
+
+.diff-layout .section-photo {
+  margin: 0;
+  height: 100%;
+}
+
+.diff-layout .section-photo img {
+  height: 100%;
+  min-height: 390px;
+  aspect-ratio: auto;
+}
+
 .diff-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
 }
 
 .diff-grid article {
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(239, 242, 20, 0.12), transparent 38%),
+    #ffffff;
   border: 1px solid var(--line);
   padding: 1.05rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 14px 30px rgba(11, 42, 88, 0.08);
 }
 
 .diff-grid article::before {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: 5px;
+  width: 6px;
   background: linear-gradient(180deg, var(--blue-700), var(--green-600));
+}
+
+.diff-grid span {
+  display: inline-flex;
+  margin-bottom: 0.55rem;
+  color: var(--green-700);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.diff-grid h3 {
+  margin-bottom: 0.4rem;
 }
 
 .diff-grid p {
@@ -765,6 +829,16 @@ section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .diff-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .diff-layout .section-photo img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 7.5;
+  }
+
   .diff-grid {
     grid-template-columns: 1fr;
   }
@@ -945,6 +1019,10 @@ section {
   }
 
   .section-photo img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .diff-layout .section-photo img {
     aspect-ratio: 4 / 3;
   }
 
