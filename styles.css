@@ -431,6 +431,30 @@ section {
   margin-bottom: 1.1rem;
 }
 
+.section-photo {
+  margin: 0 0 1.15rem;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  background: #ffffff;
+}
+
+.section-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 6.4;
+  object-fit: cover;
+}
+
+.service-photo img {
+  object-position: center 58%;
+}
+
+.diff-photo img {
+  object-position: center 52%;
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -884,6 +908,10 @@ section {
     align-items: stretch;
   }
 
+  .section-photo img {
+    aspect-ratio: 16 / 8.4;
+  }
+
   .hero-visual {
     display: flex;
     flex-direction: column;
@@ -910,6 +938,14 @@ section {
 
   .hero-banner p {
     max-width: none;
+  }
+
+  .section-photo {
+    border-radius: 18px;
+  }
+
+  .section-photo img {
+    aspect-ratio: 4 / 3;
   }
 
   .whatsapp-float {
